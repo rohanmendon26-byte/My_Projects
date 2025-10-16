@@ -1,6 +1,11 @@
 *{
     padding: 0;
     margin: 0;
+    
+}
+
+body{
+    background-color: black;
 }
 
 .main{
@@ -42,6 +47,7 @@ nav button{
 }
 
 .hero{
+    font-family: "Martel Sans", sans-serif;
     height:100%;
     display: flex;
     color: white;
@@ -49,4 +55,20 @@ nav button{
     justify-content: center;
     flex-direction: column;
     position: relative;
+    gap: 23px;
+}
+
+.hero> :nth-child(1){
+    font-weight: bolder;
+    font-size: 48px;  
+}
+
+.hero> :nth-child(2){
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.hero> :nth-child(3){
+    font-weight: 400;
+    font-size: 20px;
 }
