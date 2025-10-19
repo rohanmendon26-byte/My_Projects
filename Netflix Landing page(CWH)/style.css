@@ -128,8 +128,41 @@ nav button {
 .first{
     display: flex;
     justify-content: center;
-    max-width: 50vw;
+    max-width: 70vw;
     margin: auto;
     color: white;
+    justify-content: center;
+    align-items: center;
 }
 
+.secImg{
+    position: relative;
+}
+
+.secImg img{
+    width: 30vw;
+    position: relative;
+    z-index: 10;
+}
+
+.secImg video{
+    width: 400px;
+    position: absolute;
+    top:51px;
+    right:0;
+}
+
+section.first > div{
+    display: flex;
+    flex-direction: column;
+}
+
+section.first > div :nth-child(1){
+    font-size:48px;
+    font-weight: bolder;
+}
+
+section.first > div :nth-child(2){
+    font-size:24px;
+    font-weight: bolder;
+}
