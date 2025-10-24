@@ -248,6 +248,11 @@ footer a {
 
 
 @media screen and (max-width:1300px) {
+
+    nav {
+        max-width: 90vw;
+    }
+
     .first {
         flex-wrap: wrap;
     }
@@ -259,6 +264,41 @@ footer a {
     .secImg video {
         width: 436px;
 
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 18px;
+
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 18px;
+    }
+
+    .hero-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:16px;
+    }
+
+    faq h2{
+        text-align: center;
+        font-size:32px ;
+    }
+
+    footer{
+        max-width: 90vw;
+    }
+
+    .footer{
+        align-items: center;
     }
 
 }
