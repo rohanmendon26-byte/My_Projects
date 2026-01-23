@@ -7,8 +7,8 @@
 }
 body
 {
-    /* background-color: black; */
-    /* color:white; */
+    background-color: black;
+    color:white;
     font-family: "Roboto", sans-serif;
 }
 
@@ -59,7 +59,7 @@ body
 
 .library
 {
-   min-height: 50vh;
+   min-height: 80vh;
    position: relative;
 }
 
@@ -72,7 +72,55 @@ body
     bottom: 0;
 }
 
-.footer a
+.footer 
 {
     color:gray;
+}
+
+.right
+{
+    margin: 16px 0px;
+}
+
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34,34,34);
+}
+
+.header > *
+{
+    padding: 20px;
+}
+
+.spotify-playlist
+{
+    padding: 16px;
+}
+
+.cardContainer
+{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.spotify-playlist .card
+{
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #252525;
+}
+
+.card > *
+{
+    padding-top: 10px;
+}
+
+.card img
+{
+    width: 100%;
+    object-fit: contain;
 }
