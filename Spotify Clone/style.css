@@ -101,6 +101,7 @@ body
 
 .cardContainer
 {
+    margin: 30px;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -114,6 +115,14 @@ body
     background-color: #252525;
 }
 
+.card {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #252525;
+    position: relative;
+}
+
 .card > *
 {
     padding-top: 10px;
@@ -121,6 +130,19 @@ body
 
 .card img
 {
+    position: relative;
     width: 100%;
     object-fit: contain;
+}
+
+
+.play
+{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: #05ff05;
+    padding: 6px;
+    border-radius: 30px;
+    border: 2px solid black;
 }
