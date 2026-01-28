@@ -10,7 +10,7 @@ async function getsongs() {
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
         if (element.href.endsWith(".mpeg")) {
-            songs.push(element.href)
+            songs.push(element.href.split("/songs/")[1])
         }
 
     }
@@ -25,7 +25,18 @@ async function main() {
 
     let songUL=document.querySelector(".songList").getElementsByTagName("ul")[0]
     for (const song of songs) {
-        songUL.innerHTML=songUL.innerHTML + `<li>${song}</li>`
+        songUL.innerHTML=songUL.innerHTML + `<li>
+                            <img class="invert" src="img/music.svg" alt="">
+                            <div class="info">
+                                <div>${song.replaceAll("%20"," ")}</div>
+                                <div>Rohan</div>
+                            </div>
+                            <div class="playnow">
+                                <span>Play now</span>
+                            <img style="width: 30px;
+    height: 30px;" class="invert" src="img/play.png" alt="">
+                            </div>        
+        </li>`
         
     }
     

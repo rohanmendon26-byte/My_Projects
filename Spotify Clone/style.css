@@ -17,13 +17,15 @@ body {
 }
 
 .left {
-    width: 25vw;
+    width: 27vw;
     padding: 10px;
 }
 
 .right {
     width: 75vw;
+    font-size: 15px;
 }
+
 
 .home {
     padding: 10px;
@@ -189,8 +191,10 @@ body {
     gap: 12px;
 }
 
+
 .songList{
-    word-break: break-word;
+    width: 25vw;
+    transform: translateX(-23px);
 }
 
 .songList ul
@@ -201,4 +205,29 @@ body {
 .songList ul li
 {
     list-style-type:decimal;
+    display: flex;
+    gap:12px;
+    cursor: pointer;
+    padding: 12px 0;
+    border: 1px solid white;
+    margin: 12px 0;
+    padding: 13px;
+    border-radius: 5px;
+    width: 19vw;
+}
+
+.playnow 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+
+.playnow span
+{
+    font-size: 15px;
+    width: 64px;
+    padding: 12px 0;
+    
 }
