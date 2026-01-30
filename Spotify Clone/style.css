@@ -186,6 +186,7 @@ body {
     width: 90%;
     padding: 12px;
     width: 68vw;
+    height: 40px;
 }
 
 .songbuttons
@@ -242,4 +243,28 @@ body {
     width: 64px;
     padding: 12px 0;
     
+}
+
+
+.seekbar
+{
+    height:2px;
+    width: 98%;
+    border-radius: 10px;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    margin: 6px;;
+}
+
+.circle
+{
+    width:13px;
+    height: 13px;
+    border-radius: 13px;
+    background-color: black;
+    position: relative;
+    bottom: 6px;
+    left: 0%;
+    transition: left 0.5s;
 }

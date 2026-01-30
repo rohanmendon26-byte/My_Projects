@@ -18,11 +18,20 @@ async function getsongs() {
 
 }
 
+
+const playMusic=(track)=>{
+    let audio=new Audio("/songs/"+track)
+    audio.play()
+}
+
 async function main() {
+    let currentSong;
     //get the list of all songs
     let songs= await getsongs()
     console.log(songs)
 
+
+    //Show all the songs in the playlist
     let songUL=document.querySelector(".songList").getElementsByTagName("ul")[0]
     for (const song of songs) {
         songUL.innerHTML=songUL.innerHTML + `<li>
@@ -37,18 +46,18 @@ async function main() {
     height: 30px;" class="invert" src="img/play.png" alt="">
                             </div>        
         </li>`
-        
     }
-    
-    //play the first song
-    var audio=new Audio(songs[0]);
-    // audio.play();
 
-    audio.addEventListener("loadeddata",()=>{
-             let duration=audio.duration;
-             console.log(duration);
-             
+
+//Attach an event listener to each song
+Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e=>{
+    e.addEventListener("click",element=>{
+        console.log(e.querySelector(".info").firstElementChild.innerHTML)
+        playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
+
     })
+})
+    
 }
  
 main();
