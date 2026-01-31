@@ -1,4 +1,5 @@
 console.log("let's start javascript")
+let currentSong=new Audio();
 
 async function getsongs() {
     let a = await fetch("http://127.0.0.1:5500/songs/")
@@ -20,12 +21,12 @@ async function getsongs() {
 
 
 const playMusic=(track)=>{
-    let audio=new Audio("/songs/"+track)
-    audio.play()
+    // let audio=new Audio("/songs/"+track)
+    currentSong.src="/songs/"+track
+    currentSong.play()
 }
 
 async function main() {
-    let currentSong;
     //get the list of all songs
     let songs= await getsongs()
     console.log(songs)
@@ -57,6 +58,8 @@ Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEa
 
     })
 })
+
+//Attach an event listener to play next and previous
     
 }
  
