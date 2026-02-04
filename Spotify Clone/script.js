@@ -24,6 +24,9 @@ const playMusic=(track)=>{
     // let audio=new Audio("/songs/"+track)
     currentSong.src="/songs/"+track
     currentSong.play()
+    play.src="img/pause.svg"
+    document.querySelector(".songinfo").innerHTML=track
+    document.querySelector(".songtime").innerHTML="00:00 / 00:00"
 }
 
 async function main() {
@@ -60,7 +63,17 @@ Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEa
 })
 
 //Attach an event listener to play next and previous
-    
+
+play.addEventListener("click", () => {
+    if (currentSong.paused) {
+        currentSong.play();
+        play.src = "img/pause.svg";
+    } else {
+        currentSong.pause();
+        play.src = "img/play.svg";
+    }
+});
+
 }
  
 main();
