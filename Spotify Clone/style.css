@@ -252,7 +252,7 @@ body {
     width: 98%;
     border-radius: 10px;
     background: black;
-    position: absolute;
+    position: relative;
     bottom: 0;
     margin: 6px;;
 }
@@ -263,13 +263,24 @@ body {
     height: 13px;
     border-radius: 13px;
     background-color: black;
-    position: relative;
-    bottom: 6px;
+    position: absolute;
+    bottom: -5px;
     left: 0%;
-    transition: left 0.5s;
+    transition: left 0.1s linear;
 }
 
 
 .songbuttons img{
     cursor: pointer;
+}
+
+.songinfo,.songtime
+{
+    color: black;
+}
+
+.abovebar
+{
+    display: flex;
+    justify-content: space-between;
 }

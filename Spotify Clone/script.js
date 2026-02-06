@@ -1,6 +1,17 @@
 console.log("let's start javascript")
 let currentSong=new Audio();
 
+function secondsToTime(seconds) {
+    let minutes = Math.floor(seconds / 60);
+    let remainingSeconds = Math.floor(seconds % 60);
+
+    if (minutes < 10) minutes = "0" + minutes;
+    if (remainingSeconds < 10) remainingSeconds = "0" + remainingSeconds;
+
+    return `${minutes}:${remainingSeconds}`;
+}
+
+
 async function getsongs() {
     let a = await fetch("http://127.0.0.1:5500/songs/")
     let response = await a.text();
@@ -20,19 +31,21 @@ async function getsongs() {
 }
 
 
-const playMusic=(track)=>{
+const playMusic=(track,pause=false)=>{
     // let audio=new Audio("/songs/"+track)
     currentSong.src="/songs/"+track
-    currentSong.play()
-    play.src="img/pause.svg"
-    document.querySelector(".songinfo").innerHTML=track
+    if(!pause){
+        currentSong.play()
+        play.src="img/pause.svg"
+    }
+    document.querySelector(".songinfo").innerHTML=decodeURI(track)
     document.querySelector(".songtime").innerHTML="00:00 / 00:00"
 }
 
 async function main() {
     //get the list of all songs
     let songs= await getsongs()
-    console.log(songs)
+    playMusic(songs[0],true)
 
 
     //Show all the songs in the playlist
@@ -73,6 +86,34 @@ play.addEventListener("click", () => {
         play.src = "img/play.svg";
     }
 });
+
+
+
+//listen for time update event
+currentSong.addEventListener("loadedmetadata", () => {
+    document.querySelector(".songtime").innerText =
+        `00:00 / ${secondsToTime(currentSong.duration)}`;
+});
+
+currentSong.addEventListener("timeupdate", () => {
+    document.querySelector(".songtime").innerText =
+        `${secondsToTime(currentSong.currentTime)} / ${secondsToTime(currentSong.duration)}`;
+});
+
+// seek bar moving
+currentSong.addEventListener("timeupdate", () => {
+    let percent = (currentSong.currentTime / currentSong.duration) * 100;
+    document.querySelector(".circle").style.left = percent + "%";
+});
+
+console.log(percent);
+
+// Add an event listener to seekbar
+
+document.querySelector(".seekbr")
+
+
+
 
 }
  
