@@ -248,13 +248,14 @@ body {
 
 .seekbar
 {
-    height:2px;
+    height:4px;
     width: 98%;
     border-radius: 10px;
     background: black;
     position: relative;
     bottom: 0;
-    margin: 6px;;
+    margin: 6px;
+    cursor: pointer;
 }
 
 .circle
@@ -264,7 +265,7 @@ body {
     border-radius: 13px;
     background-color: black;
     position: absolute;
-    bottom: -5px;
+    bottom: -3px;
     left: 0%;
     transition: left 0.1s linear;
 }
@@ -283,4 +284,24 @@ body {
 {
     display: flex;
     justify-content: space-between;
+}
+
+
+@media (max-width:1400px){
+    .left{
+        background-color: red;
+        position: absolute;
+        left: -100%;
+        transition: all .3s ;
+        z-index:1;
+        width:23px;
+    }
+
+    .right{
+        width:100vw;
+    }
+
+    .playbar{
+        width: 95vw;
+    }
 }

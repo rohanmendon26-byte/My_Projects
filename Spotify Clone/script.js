@@ -1,5 +1,6 @@
 console.log("let's start javascript")
 let currentSong=new Audio();
+let percent
 
 function secondsToTime(seconds) {
     let minutes = Math.floor(seconds / 60);
@@ -106,11 +107,15 @@ currentSong.addEventListener("timeupdate", () => {
     document.querySelector(".circle").style.left = percent + "%";
 });
 
-console.log(percent);
 
 // Add an event listener to seekbar
+document.querySelector(".seekbar").addEventListener("click", e => { let percent =
+        (e.offsetX / e.target.getBoundingClientRect().width) * 100;
+    document.querySelector(".circle").style.left = percent + "%";
+    currentSong.currentTime =
+        (currentSong.duration * percent) / 100;
+});
 
-document.querySelector(".seekbr")
 
 
 
