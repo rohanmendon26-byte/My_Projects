@@ -22,9 +22,10 @@ async function getsongs() {
     let songs = []
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
-        if (element.href.endsWith(".mpeg")) {
-            songs.push(element.href.split("/songs/")[1])
-        }
+        if (element.href.endsWith(".mpeg") || element.href.endsWith(".mp3")) {
+    songs.push(element.href.split("/songs/")[1]);
+}
+
 
     }
     return songs
@@ -127,6 +128,21 @@ document.querySelector(".close").addEventListener("click",()=>{
     document.querySelector(".left").style.left="-110%"
 })
 
+//Add an event listener for previous
+previous.addEventListener("click", () => {
+    let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+    if (index - 1 >= 0) {
+        playMusic(songs[index - 1])
+    }
+})
+
+//Add an event listener for next
+next.addEventListener("click", () => {
+    let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+    if (index + 1 < songs.length) {
+        playMusic(songs[index + 1])
+    }
+})
 
 }
  
