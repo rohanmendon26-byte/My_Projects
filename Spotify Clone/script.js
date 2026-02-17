@@ -144,6 +144,14 @@ next.addEventListener("click", () => {
     }
 })
 
+
+//Add an event to volume
+document.querySelector(".range input")
+    .addEventListener("input", (e) => {
+        currentSong.volume = e.target.value / 100;
+    });
+
+
 }
  
 main();
