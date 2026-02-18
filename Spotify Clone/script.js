@@ -151,6 +151,21 @@ document.querySelector(".range input")
         currentSong.volume = e.target.value / 100;
     });
 
+    
+//Add an event to card
+let cards = document.querySelectorAll(".card");
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        let songName = card.dataset.song;
+        playMusic(songName);
+    });
+});
+
+
+//Add an event listener to mute 
+
+
+
 
 }
  
