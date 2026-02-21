@@ -106,7 +106,8 @@ body {
     gap: 10px;
     flex-wrap: wrap;
     overflow-y: auto;
-    max-height: 70vh;
+    max-height: 60vh;
+    padding-bottom: 144px;
 }
 
 
@@ -159,7 +160,7 @@ body {
 
 .play img {
     width: 25px;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
 
 .buttons>* {
@@ -258,7 +259,7 @@ body {
 
 .songList .info
 {
-    font-size: 13px;
+    font-size: 14px;
     width: 344px;
 }
 
@@ -406,9 +407,9 @@ body {
     }
 
     .playbar{
-        width: 94vw;
+        width: 100vw;
         z-index: 2;
-        bottom: 3px;
+        bottom: -2px;
         left: 0px;
         border-radius: 0;
     }
@@ -446,6 +447,9 @@ body {
 
 @media (max-width:683px)
 {
+    .cardContainer{
+        padding-bottom: 244px;
+    }
     .card{
         width: 84vw;
     }
