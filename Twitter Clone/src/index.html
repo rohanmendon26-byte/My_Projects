@@ -13,7 +13,7 @@
 
         <!-- LEFT SIDEBAR -->
         <div class="first w-64">
-            <div class="logo invert px-3 mb-6">
+            <div class="logo invert pl-2 mb-6">
                 <!-- svg -->
                 <svg viewBox="0 0 24 24" aria-hidden="true"
                     class="mt-6 w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
@@ -26,56 +26,153 @@
             </div>
 
             <div class="sidebar">
-                <ul class="flex flex-col gap-2">
-                    <li class="flex items-center gap-4 px-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer">
-                        <span class="material-symbols-outlined">
-                            home
-                        </span>
-                        Home
+                <ul class="flex flex-col gap-2 -ml-6">
+
+                    <li
+                        class="flex items-center gap-5 pl-2 pr-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer transition duration-200">
+                        <span class="material-symbols-outlined text-2xl">home</span>
+                        <span class="text-xl font-medium">Home</span>
                     </li>
-                    <li class="flex items-center gap-4 px-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer"> <span
-                            class="material-symbols-outlined">
-                            search
-                        </span>Explore</li>
-                    <li class="flex items-center gap-4 px-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer"><span
-                            class="material-symbols-outlined">
-                            notifications
-                        </span>Notifications</li>
-                    <li class="flex items-center gap-4 px-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer"><span
-                            class="material-symbols-outlined">auto_awesome</span>Grok</li>
-                    <li class="flex items-center gap-4 px-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer"><span
-                            class="material-symbols-outlined">
-                            lists
-                        </span>Lists</li>
-                    <li class="flex items-center gap-4 px-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer"><span
-                            class="material-symbols-outlined">
-                            bookmarks
-                        </span>Bookmarks</li>
-                    <li class="flex items-center gap-4 px-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer"><span
-                            class="material-symbols-outlined">
-                            communities
-                        </span>Communities</li>
-                    <li class="flex items-center gap-4 px-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer"><span
-                            class="material-symbols-outlined">add</span>Premium</li>
-                    <li class="flex items-center gap-4 px-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer"><span
-                            class="material-symbols-outlined">add</span>Profile</li>
-                    <li class="flex items-center gap-4 px-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer"><span
-                            class="material-symbols-outlined">add</span>More</li>
+
+                    <li
+                        class="flex items-center gap-5 pl-2 pr-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer transition duration-200">
+                        <span class="material-symbols-outlined text-2xl">search</span>
+                        <span class="text-xl font-medium">Explore</span>
+                    </li>
+
+                    <li
+                        class="flex items-center gap-5 pl-2 pr-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer transition duration-200">
+                        <span class="material-symbols-outlined text-2xl">notifications</span>
+                        <span class="text-xl font-medium">Notifications</span>
+                    </li>
+
+                    <li
+                        class="flex items-center gap-5 pl-2 pr-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer transition duration-200">
+                        <span class="material-symbols-outlined text-2xl">auto_awesome</span>
+                        <span class="text-xl font-medium">Grok</span>
+                    </li>
+
+                    <li
+                        class="flex items-center gap-5 pl-2 pr-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer transition duration-200">
+                        <span class="material-symbols-outlined text-2xl">list</span>
+                        <span class="text-xl font-medium">Lists</span>
+                    </li>
+
+                    <li
+                        class="flex items-center gap-5 pl-2 pr-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer transition duration-200">
+                        <span class="material-symbols-outlined text-2xl">bookmark</span>
+                        <span class="text-xl font-medium">Bookmarks</span>
+                    </li>
+
+                    <li
+                        class="flex items-center gap-5 pl-2 pr-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer transition duration-200">
+                        <span class="material-symbols-outlined text-2xl">groups</span>
+                        <span class="text-xl font-medium">Communities</span>
+                    </li>
+
+                    <li
+                        class="flex items-center gap-5 pl-2 pr-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer transition duration-200">
+                        <span class="material-symbols-outlined text-2xl">workspace_premium</span>
+                        <span class="text-xl font-medium">Premium</span>
+                    </li>
+
+                    <li
+                        class="flex items-center gap-5 pl-2 pr-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer transition duration-200">
+                        <span class="material-symbols-outlined text-2xl">person</span>
+                        <span class="text-xl font-medium">Profile</span>
+                    </li>
+
+                    <li
+                        class="flex items-center gap-5 pl-2 pr-3 py-2 rounded-full hover:bg-gray-800 cursor-pointer transition duration-200">
+                        <span class="material-symbols-outlined text-2xl">more_horiz</span>
+                        <span class="text-xl font-medium">More</span>
+                    </li>
+
+                    <li><button
+                            class="bg-white text-black w-64 py-3.5 rounded-full text-lg font-bold mt-4 hover:bg-gray-200 transition duration-200">
+                            Post
+                        </button>
+                    </li>
+
                 </ul>
+                <button
+                    class="flex items-center justify-between -ml-6  w-64 px-3 py-3 rounded-full bg-black hover:bg-gray-800 transition duration-200 mt-21">
+
+                    <!-- LEFT: Profile + Name -->
+                    <div class="flex items-center gap-3">
+
+                        <!-- Profile Image -->
+                        <img src="https://via.placeholder.com/40" class="w-10 h-10 rounded-full" />
+
+                        <!-- Name + Username -->
+                        <div class="flex flex-col leading-tight">
+                            <span class="font-semibold text-sm">Rohan</span>
+                            <span class="text-gray-400 text-sm">@rohan</span>
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT: Icon -->
+                    <span class="material-symbols-outlined text-xl text-gray-400">
+                        more_horiz
+                    </span>
+
+                </button>
             </div>
         </div>
 
         <!-- CENTER FEED -->
-        <div class="second w-150 border-x border-gray-700 min-h-screen border">
-            gg
-        </div>
+        <div class="second w-[600px] border-x border-gray-700 min-h-screen border">
+            <div class="flex justify-around border-b border-gray-700">
 
+                <button id="foryou" class="flex-1 text-center py-3 text-white font-bold border-b-2 border-blue-500">
+                    For you
+                </button>
+
+                <button id="following" class="flex-1 text-center py-3 text-gray-500 hover:bg-gray-900">
+                    Following
+                </button>
+
+            </div>
+            
+            <div class="flex gap-4 p-4 border-b border-gray-700">
+
+                <!-- Profile Image -->
+                <img src="https://via.placeholder.com/40" class="w-10 h-10 rounded-full" />
+
+                <!-- Input Area -->
+                <div class="flex-1">
+                    <input type="text" placeholder="What's happening?"
+                        class="w-full bg-black outline-none text-lg placeholder-gray-500" />
+                </div>
+
+            </div>
+            <!-- CONTENT -->
+            <div>
+
+                <!-- For You Content -->
+                <div id="foryouContent">
+                    <p class="p-4">For you post 1</p>
+                    <p class="p-4">For you post 2</p>
+                    <p class="p-4">For you post 3</p>
+                </div>
+
+                <!-- Following Content -->
+                <div id="followingContent" class="hidden">
+                    <p class="p-4">Following post 1</p>
+                    <p class="p-4">Following post 2</p>
+                </div>
+
+            </div>
+
+        </div>
         <!-- RIGHT PANEL -->
         <div class="third w-80 px-4">
             gg
         </div>
-
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
