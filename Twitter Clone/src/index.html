@@ -12,7 +12,7 @@
     <div class="flex justify-center">
 
         <!-- LEFT SIDEBAR -->
-        <div class="first w-64">
+        <div class="first w-64 h-screen sticky top-0">
             <div class="logo invert pl-2 mb-6">
                 <!-- svg -->
                 <svg viewBox="0 0 24 24" aria-hidden="true"
@@ -123,27 +123,56 @@
 
         <!-- CENTER FEED -->
         <div class="second w-[600px] border-x border-gray-700 min-h-screen border">
-            <div class="flex justify-around border-b border-gray-700">
+            <div class="sticky top-0 bg-black z-10">
+                <div class="flex border-b border-gray-700">
 
-                <button id="foryou" class="flex-1 text-center py-3 text-white font-bold border-b-2 border-blue-500">
-                    For you
-                </button>
+                    <button id="foryou" class="flex-1 text-center py-3 text-white font-bold border-b-2 border-blue-500">
+                        For you
+                    </button>
 
-                <button id="following" class="flex-1 text-center py-3 text-gray-500 hover:bg-gray-900">
-                    Following
-                </button>
+                    <button id="following" class="flex-1 text-center py-3 text-gray-500 hover:bg-gray-900">
+                        Following
+                    </button>
 
+                </div>
             </div>
-            
             <div class="flex gap-4 p-4 border-b border-gray-700">
 
-                <!-- Profile Image -->
+                <!-- Profile -->
                 <img src="https://via.placeholder.com/40" class="w-10 h-10 rounded-full" />
 
-                <!-- Input Area -->
                 <div class="flex-1">
-                    <input type="text" placeholder="What's happening?"
-                        class="w-full bg-black outline-none text-lg placeholder-gray-500" />
+
+                    <!-- Input -->
+                    <div class="border-b border-gray-700 pb-3">
+                        <input type="text" placeholder="What's happening?"
+                            class="w-full bg-black outline-none text-lg placeholder-gray-500" />
+                    </div>
+
+                    <!-- ICONS + BUTTON (PLACE HERE) -->
+                    <div class="flex items-center justify-between mt-3">
+
+                        <!-- LEFT: Icons -->
+                        <div class="flex gap-4 text-blue-500">
+                            <span
+                                class="material-symbols-outlined cursor-pointer hover:bg-gray-800 p-2 rounded-full">image</span>
+                            <span
+                                class="material-symbols-outlined cursor-pointer hover:bg-gray-800 p-2 rounded-full">gif</span>
+                            <span
+                                class="material-symbols-outlined cursor-pointer hover:bg-gray-800 p-2 rounded-full">poll</span>
+                            <span
+                                class="material-symbols-outlined cursor-pointer hover:bg-gray-800 p-2 rounded-full">emoji_emotions</span>
+                            <span
+                                class="material-symbols-outlined cursor-pointer hover:bg-gray-800 p-2 rounded-full">schedule</span>
+                        </div>
+
+                        <!-- RIGHT: Button -->
+                        <button class="bg-white text-black px-5 py-1.5 rounded-full font-bold hover:bg-gray-200">
+                            Post
+                        </button>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -152,23 +181,302 @@
 
                 <!-- For You Content -->
                 <div id="foryouContent">
-                    <p class="p-4">For you post 1</p>
-                    <p class="p-4">For you post 2</p>
-                    <p class="p-4">For you post 3</p>
+                    <div class="p-4 border-b border-gray-700 flex gap-4">
+
+                        <!-- Profile Image -->
+                        <img src="https://via.placeholder.com/40" class="w-10 h-10 rounded-full" />
+
+                        <!-- Content -->
+                        <div class="flex-1">
+
+                            <!-- Name + Username -->
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold">Elon Musk</span>
+                                <span class="text-gray-500">@elonmusk · 2h</span>
+                            </div>
+
+                            <!-- Tweet Text -->
+                            <p class="mt-1">
+                                Building something exciting 🚀 Stay tuned!
+                            </p>
+
+                            <!-- Tweet Image -->
+                            <img src="/img/elonmusk.png" class="w-full rounded-2xl mt-3 border border-gray-700" />
+
+                        </div>
+
+                    </div>
+                    <div class="p-4 border-b border-gray-700 flex gap-4">
+
+                        <img src="/img/profile1.jpg" class="w-10 h-10 rounded-full" />
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold">Rohan</span>
+                                <span class="text-gray-500">@rohan · 1h</span>
+                            </div>
+
+                            <p class="mt-1">
+                                Just built my Twitter UI clone using Tailwind 💻🔥
+                            </p>
+                            <img src="/img/post2.jpg" class="w-full rounded-2xl mt-3 border border-gray-700" />
+                        </div>
+
+                    </div>
+                    <div class="p-4 border-b border-gray-700 flex gap-4">
+
+                        <img src="/img/profile2.jpg" class="w-10 h-10 rounded-full" />
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold">Rohan</span>
+                                <span class="text-gray-500">@rohan · 1h</span>
+                            </div>
+
+                            <p class="mt-1">
+                                Just built my Twitter UI clone using Tailwind 💻🔥
+                            </p>
+                            <img src="/img/post3.png" class="w-full rounded-2xl mt-3 border border-gray-700" />
+                        </div>
+
+                    </div>
+
                 </div>
 
                 <!-- Following Content -->
                 <div id="followingContent" class="hidden">
-                    <p class="p-4">Following post 1</p>
-                    <p class="p-4">Following post 2</p>
+                    <div class="p-4 border-b border-gray-700 flex gap-4">
+
+                        <img src="/img/profile3.jpg" class="w-10 h-10 rounded-full" />
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold">Rohan</span>
+                                <span class="text-gray-500">@rohan · 1h</span>
+                            </div>
+
+                            <p class="mt-1">
+                                Just built my Twitter UI clone using Tailwind 💻🔥
+                            </p>
+                            <img src="/img/post4.webp" class="w-full rounded-2xl mt-3 border border-gray-700" />
+                        </div>
+
+                    </div>
+                    <div class="p-4 border-b border-gray-700 flex gap-4">
+
+                        <img src="/img/profile4.jpg" class="w-10 h-10 rounded-full" />
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold">Rohan</span>
+                                <span class="text-gray-500">@rohan · 1h</span>
+                            </div>
+
+                            <p class="mt-1">
+                                Just built my Twitter UI clone using Tailwind 💻🔥
+                            </p>
+                            <img src="/img/post6.webp" class="w-full rounded-2xl mt-3 border border-gray-700" />
+                        </div>
+
+                    </div>
+                    <div class="p-4 border-b border-gray-700 flex gap-4">
+
+                        <img src="/img/profile5.webp" class="w-10 h-10 rounded-full" />
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold">Rohan</span>
+                                <span class="text-gray-500">@rohan · 1h</span>
+                            </div>
+
+                            <p class="mt-1">
+                                Just built my Twitter UI clone using Tailwind 💻🔥
+                            </p>
+                            <img src="/img/post7.jpg" class="w-full rounded-2xl mt-3 border border-gray-700" />
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
 
         </div>
+
         <!-- RIGHT PANEL -->
-        <div class="third w-80 px-4">
-            gg
+        <div class="third w-96 px-4">
+            <div class="sticky top-0 bg-black pb-3 ml-3 mt-3">
+                <div class="relative">
+                    <!-- Icon -->
+                    <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 bg-gray-900">
+                        search
+                    </span>
+                    <!-- Input -->
+                    <input type="text" placeholder="Search"
+                        class="w-full max-w-md bg-gray-900 text-white pl-10 pr-4 py-2 rounded-full outline-none placeholder-gray-400 focus:bg-black focus:border focus:border-blue-500" />
+                </div>
+            </div>
+
+            <div class="bg-gray-900 rounded-2xl ml-3 p-4 mt-4">
+                <!-- Title -->
+                <h2 class="text-xl font-bold mb-2">
+                    Subscribe to Premium
+                </h2>
+                <!-- Offer -->
+                <p class="text-white font-semibold mb-2">
+                    50% off
+                </p>
+                <!-- Description -->
+                <p class="text-gray-400 text-sm mb-4">
+                    Get rid of ads, see your analytics, boost your replies and unlock 20+ features.
+                </p>
+                <!-- Button -->
+                <button
+                    class="bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-gray-200 transition duration-200">
+                    Subscribe
+                </button>
+            </div>
+
+            <div class="bg-gray-900 rounded-2xl ml-3 p-4 mt-4">
+                <!-- Header -->
+                <div class="flex justify-between items-center mb-3">
+                    <h2 class="text-xl font-bold">Today’s News</h2>
+                    <!-- Settings Icon -->
+                    <span class="material-symbols-outlined cursor-pointer hover:bg-gray-800 p-2 rounded-full">
+                        settings
+                    </span>
+                </div>
+                <!-- News Item 1 -->
+                <div class="cursor-pointer hover:bg-gray-800 p-2 rounded-lg mb-2">
+                    <p class="font-semibold">
+                        Modi Draws Huge Crowds in West Bengal Campaign Rallies
+                    </p>
+                    <p class="text-gray-500 text-sm">
+                        22 hours ago · News · 130.3K posts
+                    </p>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="cursor-pointer hover:bg-gray-800 p-2 rounded-lg mb-2">
+                    <p class="font-semibold">
+                        Prime Minister Narendra Modi Announces 'Mera Booth Sabse Mazboot Samvad' Interaction with BJP
+                        Tamil Nadu Karyakartas
+                    </p>
+                    <p class="text-gray-500 text-sm">
+                        Trending now · News · 525 posts
+                    </p>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="cursor-pointer hover:bg-gray-800 p-2 rounded-lg">
+                    <p class="font-semibold">
+                        Leaders Honor Mahatma Jyotirao Phule on Bicentennial Birth Kickoff
+                    </p>
+                    <p class="text-gray-500 text-sm">
+                        1 day ago · News · 87.6K posts
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-900 rounded-2xl ml-3 p-4 mt-4">
+                <!-- Header -->
+                <h2 class="text-xl font-bold mb-3">What’s happening</h2>
+                <!-- Item 1 -->
+                <div class="flex justify-between items-start hover:bg-gray-800 p-2 rounded-lg cursor-pointer mb-2">
+                    <div>
+                        <p class="text-gray-500 text-sm">Trending in India</p>
+                        <p class="font-bold">#HaarKumar</p>
+                    </div>
+                    <span class="material-symbols-outlined text-gray-500">more_horiz</span>
+                </div>
+                <!-- Item 2 -->
+                <div class="flex justify-between items-start hover:bg-gray-800 p-2 rounded-lg cursor-pointer mb-2">
+                    <div>
+                        <p class="text-gray-500 text-sm">Trending in India</p>
+                        <p class="font-bold">chef gaurav glorious year</p>
+                    </div>
+                    <span class="material-symbols-outlined text-gray-500">more_horiz</span>
+                </div>
+                <!-- Item 3 -->
+                <div class="flex justify-between items-start hover:bg-gray-800 p-2 rounded-lg cursor-pointer mb-2">
+                    <div>
+                        <p class="text-gray-500 text-sm">Entertainment · Trending</p>
+                        <p class="font-bold">#ToxicTheMovie</p>
+                    </div>
+                    <span class="material-symbols-outlined text-gray-500">more_horiz</span>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="flex justify-between items-start hover:bg-gray-800 p-2 rounded-lg cursor-pointer mb-2">
+                    <div>
+                        <p class="text-gray-500 text-sm">Only on X · Trending</p>
+                        <p class="font-bold">#ManageStress</p>
+                    </div>
+                    <span class="material-symbols-outlined text-gray-500">more_horiz</span>
+                </div>
+
+                <!-- Show More -->
+                <div class="mt-2 cursor-pointer hover:bg-gray-800 p-2 rounded-lg">
+                    <p class="text-blue-500">Show more</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-900 rounded-2xl ml-3 p-4 mt-4">
+
+                <!-- Header -->
+                <h2 class="text-xl font-bold mb-3">Who to follow</h2>
+
+                <!-- User 1 -->
+                <div class="flex items-center justify-between mb-3 hover:bg-gray-800 p-2 rounded-lg cursor-pointer">
+
+                    <div class="flex items-center gap-3">
+                        <img src="https://picsum.photos/40?1" class="w-10 h-10 rounded-full" />
+                        <div>
+                            <p class="font-bold">Surya Kumar Yadav</p>
+                            <p class="text-gray-500 text-sm">@surya_14kumar</p>
+                        </div>
+                    </div>
+
+                    <button class="bg-white text-black px-3 py-1 rounded-full font-bold hover:bg-gray-200">
+                        Follow
+                    </button>
+
+                </div>
+
+                <!-- User 2 -->
+                <div class="flex items-center justify-between mb-3 hover:bg-gray-800 p-2 rounded-lg cursor-pointer">
+
+                    <div class="flex items-center gap-3">
+                        <img src="https://picsum.photos/40?2" class="w-10 h-10 rounded-full" />
+                        <div>
+                            <p class="font-bold">CoinMarketCap</p>
+                            <p class="text-gray-500 text-sm">@CoinMarketCap</p>
+                        </div>
+                    </div>
+
+                    <button class="bg-white text-black px-3 py-1 rounded-full font-bold hover:bg-gray-200">
+                        Follow
+                    </button>
+
+                </div>
+
+                <!-- User 3 -->
+                <div class="flex items-center justify-between  mb-3 hover:bg-gray-800 p-2 rounded-lg cursor-pointer">
+
+                    <div class="flex items-center gap-3">
+                        <img src="https://picsum.photos/40?3" class="w-10 h-10 rounded-full" />
+                        <div>
+                            <p class="font-bold">Trust Wallet</p>
+                            <p class="text-gray-500 text-sm">@TrustWallet</p>
+                        </div>
+                    </div>
+
+                    <button class="bg-white text-black px-3 py-1 rounded-full font-bold hover:bg-gray-200">
+                        Follow
+                    </button>
+
+                </div>
+
+                <!-- Show More -->
+                <div class="cursor-pointer hover:bg-gray-800 p-2 rounded-lg">
+                    <p class="text-blue-500">Show more</p>
+                </div>
+
+            </div>
         </div>
     </div>
 
