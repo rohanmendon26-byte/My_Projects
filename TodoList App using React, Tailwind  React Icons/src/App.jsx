@@ -6,26 +6,51 @@ import Navbar from './Components/Navbar'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [todo, setTodo] = useState("")
+  const [todos, setTodos] = useState([])
+
+  const handleEdit=()=>{
+
+  }
+
+  const handleDelete=()=>{
+   
+  }
+
+  const handleChange=(e)=>{
+     setTodo(e.target.value)
+  }
+
+  const handleAdd=()=>{
+    setTodos([...todos,{todo,isCompleted:false}])
+    setTodo("")
+    console.log(todos)
+    }
+
 
   return (
     <>
     <Navbar/>
       <div className="container mx-auto my-5 rounded-xl p-5 bg-violet-100 min-h-[70vh]">
-        <div className="addTodo">
+        <div className="addTodo my-5">
           <h2 className='text-lg font-bold'>Add a Todo</h2>
-          <input className='bg-white' type="text"/>
-          <button className='bg-violet-800 hover:bg-violet-950 p-3 py-1'>Add</button>
+          <input onChange={handleChange} value={todo} className='bg-white w-1/2' type="text"/>
+          <button onClick={handleAdd} className='bg-violet-800 hover:bg-violet-950 p-2 py-1 text-sm font-bold text-white rounded-xl mx-6'>Add</button>
         </div>
           <h2  className="text-2xl font-bold">Your Todos</h2>
           <div className="todos">
-            <div className="todo flex">
-               <div className="text">Lorem, ipsum dolor sit amet consectetur adipisicing.</div>
+            {todos.map(item=>{
+
+           
+            return <div key={todo} className="todo flex">
+               <div className={item.isCompleted?"":"line-through"}>{item.todo}</div>
                <div className="buttons">
-                  <button>Edit</button>
-                  <button>Delete</button>
+                  <button onClick={handleEdit}className='bg-violet-800 hover:bg-violet-950 p-2 py-1 text-sm font-bold text-white rounded-xl mx-1'>Edit</button>
+                  <button onClick={handleDelete} className='bg-violet-800 hover:bg-violet-950 p-2 py-1 text-sm font-bold text-white rounded-xl mx-1'>Delete</button>
                </div>
             </div>
+             })}
           </div>
       </div>
     </>
