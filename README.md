@@ -16,6 +16,8 @@ A responsive clone of the Microsoft landing page built using HTML and CSS.
 - CSS3
 - Font Awesome
 
+Deployed : https://startling-halva-e859df.netlify.app/
+
 ---
 
 ## 2. Netflix Landing Page Clone
@@ -51,6 +53,8 @@ A Spotify-inspired music player interface built with HTML, CSS, and JavaScript.
 - HTML5
 - CSS3
 - JavaScript
+
+Deployed : voluble-trifle-78908b.netlify.app
 
 ---
 
