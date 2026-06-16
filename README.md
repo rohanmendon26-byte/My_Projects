@@ -54,7 +54,7 @@ A Spotify-inspired music player interface built with HTML, CSS, and JavaScript.
 - CSS3
 - JavaScript
 
-Deployed : voluble-trifle-78908b.netlify.app
+Deployed : https://voluble-trifle-78908b.netlify.app/
 
 ---
 
