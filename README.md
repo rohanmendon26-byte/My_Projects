@@ -134,8 +134,9 @@ A task management application built using React and Tailwind CSS.
 - GitHub
 - VS Code
 - Vite
-
+  
 Deployed : https://remarkable-pithivier-8d0cc5.netlify.app/
+
 ---
 
 # 🎯 Skills Demonstrated
